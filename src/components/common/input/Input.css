@@ -1,0 +1,45 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  padding: 0 16px;
+  border: 1px solid #969696;
+  border-radius: 12px;
+  font-size: 12px;
+  outline: none;
+  box-sizing: border-box;
+  line-height: 100%;
+  letter-spacing: 0%;
+  --focus-color: #0a84ff;
+}
+
+.input:focus {
+  border-color: var(--focus-color, #0a84ff);
+}
+
+.input::placeholder {
+  color: #969696;
+}
+
+/* 날짜 입력 필드 캘린더 아이콘 스타일 */
+.date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+/* 포커스시 캘린더 아이콘 색상 변경 */
+.date-input:focus::-webkit-calendar-picker-indicator {
+  filter: invert(41%) sepia(55%) saturate(5348%) hue-rotate(198deg)
+    brightness(102%) contrast(98%);
+}
+
+/* Input이 열려있는 상태에서 아이콘 색상 유지 */
+.date-input-active::-webkit-calendar-picker-indicator {
+  filter: invert(41%) sepia(55%) saturate(5348%) hue-rotate(198deg)
+    brightness(102%) contrast(98%);
+}

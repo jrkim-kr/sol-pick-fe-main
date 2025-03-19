@@ -1,0 +1,104 @@
+/* 전체 컨테이너 */
+.card-custom-background-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  position: relative;
+}
+
+/* 컨텐츠 영역 */
+.card-custom-background-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 32px;
+}
+
+/* 타이틀 영역 */
+.card-background-title {
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.card-background-title h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.card-background-underline {
+  width: 100%;
+  height: 1px;
+  background-color: #ebebeb;
+  margin-bottom: 30px;
+}
+
+/* 카드 배경 선택 섹션 */
+.card-bg-selection-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-bg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.card-bg-option {
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-bg-option.selected {
+  border: 2px solid #0a84ff;
+}
+
+.bg-card-preview {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 선택 버튼 */
+.background-button-cotainer {
+  align-items: center;
+  padding: 0 50px;
+}
+
+.background-selection-button {
+  background-color: #0a84ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.background-selection-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.background-selection-button:hover:not(:disabled) {
+  background-color: #486eff;
+}

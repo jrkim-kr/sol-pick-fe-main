@@ -1,0 +1,21 @@
+.game-background-container {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 375px; /* 모바일 화면 최대 너비 설정 */
+  margin: 0 auto; /* 화면 중앙 정렬 */
+  z-index: 0;
+  overflow: hidden;
+}
+
+.game-background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated; /* 픽셀 아트 스타일 렌더링 */
+  image-rendering: crisp-edges;
+}

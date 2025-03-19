@@ -1,0 +1,17 @@
+.cat-greeting-page-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: white; /* Background color outside the container */
+}
+
+.cat-greeting-component-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}

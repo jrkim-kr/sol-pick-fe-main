@@ -1,0 +1,94 @@
+.points-summary-container {
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 게임 버튼에 그림자와 호버 효과 추가 */
+.card-buttons button {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.card-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.points-summary {
+  background: linear-gradient(135deg, #38bdf8, #0a84ff);
+  /* color: #0a84ff; */
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.points-icon {
+  margin-bottom: 8px;
+  background-color: rgba(56, 189, 248, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.points-message {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 5px;
+}
+
+.points-amount {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.highlight {
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.points-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: #6b7280;
+  font-size: 16px;
+}

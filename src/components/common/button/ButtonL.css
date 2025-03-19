@@ -1,0 +1,40 @@
+.buttonL {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.buttonL-filled {
+  background-color: #0a84ff;
+  color: #ffffff;
+  border: none;
+}
+
+/* .button-filled:hover {
+  background-color:
+} */
+
+.buttonL-outlined {
+  background-color: #ffffff;
+  color: #0a84ff;
+  border: 1px solid #0a84ff;
+}
+
+/* .button-outlined:hover {
+  background-color: 
+} */
+
+.buttonL-disabled {
+  background-color: #ffffff;
+  color: #969696;
+  border: 1px solid #969696;
+  cursor: auto;
+}

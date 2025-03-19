@@ -1,0 +1,45 @@
+.onboarding-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.solpick-logo {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.get-started-button {
+  width: 343px;
+  height: 56px;
+  font-family: "SUIT", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #0a84ff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.get-started-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+}
+
+.get-started-button:active {
+  background-color: #eeeeee;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}

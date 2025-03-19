@@ -1,0 +1,26 @@
+.toast-container {
+  white-space: nowrap;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+  position: fixed;
+  bottom: 188px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.show-toast {
+  opacity: 1;
+}
+
+.toast-message {
+  margin: 0;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}

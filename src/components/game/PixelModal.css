@@ -1,0 +1,151 @@
+/* 픽셀 모달 오버레이 스타일 */
+.pixel-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 픽셀 모달 컨테이너 스타일 */
+.pixel-modal-container {
+  background-color: #3e3546;
+  border: 4px solid #45283c;
+  border-radius: 4px;
+  padding: 20px;
+  width: 85%;
+  max-width: 320px;
+  text-align: center;
+  image-rendering: pixelated;
+  position: relative;
+  z-index: 1001;
+  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 픽셀 모달 타이틀 스타일 */
+.pixel-modal-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffd866;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 0 #45283c;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.pixel-modal-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: #ffd866;
+}
+
+/* 픽셀 모달 내용 스타일 */
+.pixel-modal-content {
+  margin: 15px 0;
+}
+
+.pixel-modal-message {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #f8f8f8;
+  margin: 0;
+  text-align: center;
+  white-space: pre-line; /* 줄바꿈 표시 향상 */
+}
+
+/* 픽셀 모달 버튼 컨테이너 스타일 */
+.pixel-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* 픽셀 모달 버튼 기본 스타일 */
+.pixel-modal-button {
+  position: relative;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #45283c;
+  box-shadow: 0 4px 0 #45283c;
+  transition: all 0.1s ease;
+  image-rendering: pixelated;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* 픽셀 모달 버튼 효과 */
+.pixel-modal-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+
+.pixel-modal-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #45283c;
+}
+
+.pixel-modal-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #45283c;
+}
+
+/* 모달 버튼 타입별 스타일 */
+.pixel-modal-button.primary {
+  background-color: #29adff;
+  border-color: #45283c;
+}
+
+.pixel-modal-button.secondary {
+  background-color: #5a6988;
+  border-color: #334155;
+}
+
+.pixel-modal-button.danger {
+  background-color: #ff5277;
+  border-color: #45283c;
+}
+
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

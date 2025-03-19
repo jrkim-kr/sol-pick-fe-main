@@ -1,0 +1,51 @@
+.chip-container {
+  width: 100%;
+  max-width: 375px;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari 등의 브라우저에서 스크롤바 숨기기 */
+.chip-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 8px 16px;
+  gap: 8px;
+  height: 28px;
+  align-items: center;
+}
+
+.chip-item {
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #969696;
+  border: 1px solid #969696;
+  transition: all 0.2s ease;
+  line-height: 100%;
+  letter-spacing: 0%;
+  align-items: center;
+}
+
+.chip-item.selected {
+  background-color: #0a84ff;
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid #0a84ff;
+}
+
+/* 버튼의 기본 스타일 제거 */
+.chip-item {
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

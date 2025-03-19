@@ -1,0 +1,39 @@
+.order-history-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 144px); /* 헤더 + 메뉴 높이 고려 */
+  overflow-y: auto;
+  padding-bottom: 88px; /* 메뉴 높이만큼 패딩 */
+}
+
+.no-order-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #969696;
+  font-size: 14px;
+  text-align: center;
+}
+
+.order-error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #ff6b6b;
+  font-size: 14px;
+  text-align: center;
+  gap: 8px;
+}
+
+.loading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #969696;
+  font-size: 14px;
+}

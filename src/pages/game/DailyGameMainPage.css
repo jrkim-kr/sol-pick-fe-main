@@ -1,0 +1,91 @@
+/* 카드 뒤집기 게임 페이지 스타일 */
+.daily-game-main-page-container {
+  width: 100%;
+  height: 100%;
+  max-width: 375px; /* 모바일 화면 최대 너비 */
+  margin: 0 auto; /* 화면 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+  overflow: hidden; /* 전체 컨테이너는 overflow hidden */
+  background-color: #222034; /* 픽셀 아트 배경색 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* 모바일 앱 느낌을 위한 그림자 */
+}
+
+.daily-game-main-component-container {
+  width: 100%;
+  height: 100vh;
+  max-height: 100%; /* 모바일 화면 최대 높이 */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.daily-game-main-scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 100px;
+  align-items: center;
+  position: relative;
+}
+
+/* 커스텀 스크롤바 스타일 */
+.daily-game-main-scrollable-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.daily-game-main-scrollable-content::-webkit-scrollbar-track {
+  background: #222034;
+}
+
+.daily-game-main-scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #ff5277;
+  border-radius: 0;
+  border: 2px solid #45283c;
+}
+
+/* 픽셀 아트 배경 추가 스타일 */
+.game-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222034;
+  background-image: linear-gradient(
+      to right,
+      rgba(34, 32, 52, 0.8) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(34, 32, 52, 0.8) 1px, transparent 1px);
+  background-size: 16px 16px;
+  z-index: 0;
+}
+
+/* 반응형 조정 */
+@media (max-width: 375px) {
+  .daily-game-main-component-container {
+    width: 100%;
+  }
+}
+
+/* 픽셀 아트 스타일 애니메이션 */
+@keyframes pixelFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.daily-game-main-container {
+  animation: pixelFadeIn 0.3s ease-out;
+}

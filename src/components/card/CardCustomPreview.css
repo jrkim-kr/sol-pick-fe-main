@@ -1,0 +1,60 @@
+.card-custom-preview-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.preview-instruction {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1;
+}
+
+.card-custom-preview {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.card-background {
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-background.drop-zone-active {
+  box-shadow: 0 0 0 2px #0a84ff, 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.placed-sticker {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease-in-out;
+  position: relative;
+}
+
+.placed-sticker:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.placed-sticker:active {
+  transform: scale(0.95);
+}

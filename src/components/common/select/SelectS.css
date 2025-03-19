@@ -1,0 +1,59 @@
+.selectS-container {
+  position: relative;
+  display: inline-block;
+  width: 76px;
+}
+
+.selectS {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 12px;
+  border: 1px solid #969696;
+  color: #969696;
+  border-radius: 12px;
+  background-color: white;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.selectS:focus {
+  border-color: #0a84ff;
+}
+
+.selectSArrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 12px;
+  background-color: #ffffff;
+}
+
+.selectSArrow-icon.default {
+  display: block;
+}
+
+.selectSArrow-icon.active {
+  display: none;
+}
+
+.selectS:focus ~ .selectSArrow-icon.default {
+  display: none;
+}
+
+.selectS:focus ~ .selectSArrow-icon.active {
+  display: block;
+}
+
+/* IE에서 기본 화살표 숨기기 */
+.selectS::-ms-expand {
+  display: none;
+}

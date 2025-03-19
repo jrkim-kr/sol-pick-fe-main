@@ -1,0 +1,56 @@
+.storage-list {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 20px;
+}
+
+.storage-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.storage-date {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 8px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.storage-item-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.storage-item-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+.storage-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+}

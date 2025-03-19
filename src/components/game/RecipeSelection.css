@@ -1,0 +1,188 @@
+.recipe-selection-container {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.recipe-selection-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.recipe-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.recipe-card {
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.recipe-card.selected {
+  border: 2px solid #0a84ff;
+  box-shadow: 0 0 0 1px #0a84ff;
+}
+
+.recipe-card.selected::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #0a84ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px white;
+  z-index: 2;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card:hover .game-recipe-name {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0)
+  );
+  padding-bottom: 15px;
+}
+
+.recipe-image-selection {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.game-recipe-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 8px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 모바일 터치 최적화 */
+.recipe-card:active {
+  transform: scale(0.97);
+}
+
+.help-section {
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.help-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.help-button span {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.recipe-continue-button {
+  background-color: #0a84ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(123, 104, 238, 0.2);
+}
+
+.recipe-continue-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.recipe-continue-button:hover:not(:disabled) {
+  background-color: #486eff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(123, 104, 238, 0.25);
+}
+
+/* 미디어 쿼리 추가 */
+@media (max-width: 375px) {
+  .recipe-grid {
+    gap: 12px;
+  }
+
+  .recipe-card {
+    border-radius: 14px;
+  }
+
+  .game-recipe-name {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

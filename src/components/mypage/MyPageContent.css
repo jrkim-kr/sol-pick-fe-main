@@ -1,0 +1,91 @@
+.mypage-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: calc(100vh - 232px); /* 헤더 + 하단 메뉴 높이 고려 */
+  overflow-y: auto;
+  margin-bottom: 88px; /* 메뉴 높이 */
+  position: relative; /* 상대적 위치 설정을 위해 필요 */
+}
+
+.mypage-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.mypage-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.mypage-greeting {
+  font-size: 16px;
+  color: #333333;
+  margin-top: 4px;
+}
+
+.login-banner-container {
+  background-color: #0a84ff0d;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.login-banner-ment {
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0;
+}
+
+.login-banner-button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.mypage-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mypage-ad-banner {
+  height: 120px;
+  background-color: #0a84ff1a;
+  border-radius: 12px;
+  margin-top: auto;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.mypage-ad-banner p {
+  color: #0a84ff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.mypage-logout-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px; /* 광고 배너와의 간격 */
+  margin-bottom: 16px; /* 하단 여백 */
+}
+
+.bold {
+  font-weight: bold;
+}

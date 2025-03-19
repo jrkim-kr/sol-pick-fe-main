@@ -1,0 +1,27 @@
+.order-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.order-group {
+  margin-bottom: 16px;
+}
+
+.order-date {
+  color: #969696;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  padding: 12px 16px 0 16px;
+  margin-bottom: 8px;
+}
+
+.order-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 232px);
+  color: #969696;
+  font-size: 14px;
+}

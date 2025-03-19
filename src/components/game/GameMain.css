@@ -1,0 +1,83 @@
+.game-main-container {
+  width: 100%;
+  height: 100vh; /* 높이를 viewport 높이로 고정 */
+  max-width: 480px; /* 모바일 화면 최대 너비 제한 */
+  margin: 0 auto; /* 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* 컨테이너 자체는 overflow hidden */
+}
+
+.game-main-content {
+  flex: 1;
+  overflow-y: auto; /* 내부 콘텐츠가 넘칠 경우 스크롤 적용 */
+  padding: 20px;
+  position: relative;
+  padding-bottom: 100px; /* 하단 패딩 추가 */
+}
+
+/* 픽셀 폰트 적용 */
+.pixel-font {
+  font-family: "Press Start 2P", cursive !important;
+}
+
+/* 픽셀 폰트 적용 - 한글과 영문 모두 지원하는 폰트 스택 */
+.pixel-font-kr {
+  font-family: "DungGeunMo", "Press Start 2P", cursive !important;
+  letter-spacing: -0.5px; /* 한글 간격 조정 */
+  word-spacing: 1px;
+  line-height: 1.5;
+}
+
+.game-menu-group {
+  display: flex;
+  justify-content: space-between;
+  position: relative; /* 추가: 요소들이 배경 위에 표시되도록 */
+}
+
+.daily-game,
+.storage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #fef5f0;
+  position: relative; /* 추가 */
+}
+
+.daily-game:hover,
+.storage:hover {
+  transform: scale(1.05);
+}
+
+.daily-game-icon,
+.storage-icon {
+  width: 90%;
+}
+
+.cat-playground-container {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+  position: relative; /* 추가 */
+  z-index: 2; /* 추가 */
+}
+
+.cat-playground {
+  width: 100%;
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+/* 애니메이션 추가 (기존 코드에 누락되어 있을 수 있음) */
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}

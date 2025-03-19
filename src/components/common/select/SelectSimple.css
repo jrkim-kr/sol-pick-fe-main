@@ -1,0 +1,55 @@
+.selectSimple-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.selectSimple {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: #000000;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.selectSimpleArrow-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  pointer-events: none;
+  width: 12px;
+  height: 12px;
+}
+
+.selectSimpleArrow-icon.default {
+  display: block;
+  filter: brightness(0);
+}
+
+.selectSimpleArrow-icon.active {
+  display: none;
+}
+
+.selectSimple:focus ~ .selectSimpleArrow-icon.default {
+  display: none;
+}
+
+.selectSimple:focus ~ .selectSimpleArrow-icon.active {
+  display: block;
+}
+
+/* IE에서 기본 화살표 숨기기 */
+.selectSimple::-ms-expand {
+  display: none;
+}

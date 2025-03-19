@@ -1,0 +1,74 @@
+.refrigerator-header-container {
+  width: 100%;
+  top: 0;
+}
+
+.refrigerator-header {
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  gap: 12px;
+}
+
+.refrigerator-header-title {
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.015em;
+}
+
+.ingredient-add-row-button {
+  width: 67px;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 12px;
+  background-color: #0a84ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.ingredient-add-ment {
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  padding: 0;
+}
+
+.plus-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.detail-section {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.total-quantity {
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  padding: 0;
+}
+
+.detailArrow-icon {
+  filter: invert(0%) saturate(100%) brightness(0%);
+}

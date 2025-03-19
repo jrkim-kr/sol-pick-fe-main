@@ -1,0 +1,267 @@
+.receipt-scanner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.receipt-scanner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.scanner-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.015em;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.receipt-scanner-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 카메라 뷰 스타일 */
+.camera-view {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+.camera-preview {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-guidance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.guidance-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 180%;
+  letter-spacing: 0%;
+  pointer-events: none;
+}
+
+.receipt-frame {
+  width: 80%;
+  height: 60%;
+  border: 2px dashed #ffffff;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  pointer-events: none;
+}
+
+.capture-button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+  pointer-events: auto; /* 버튼만 클릭 가능하게 */
+  width: 100%;
+}
+
+.capture-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.capture-button:active {
+  background-color: #0a84ff;
+}
+
+.capture-button:active img {
+  filter: brightness(0) invert(1); /* 버튼 클릭 시 아이콘 색상을 흰색으로 변경 */
+}
+
+.capture-button img {
+  width: 36px;
+  height: 36px;
+}
+
+/* 로딩 뷰 스타일 */
+.loading-view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.loading-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.captured-receipt {
+  width: 100%;
+  height: 80%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #eaeaea;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+}
+
+.captured-receipt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 스캔 효과 */
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(237, 50, 65, 0.7);
+  box-shadow: 0 0 8px 2px rgba(237, 50, 65, 0.5);
+  z-index: 10;
+  animation: scanAnimation 3s linear infinite;
+}
+
+@keyframes scanAnimation {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.loading-progress-container {
+  width: 80%;
+  height: 6px;
+  background-color: #d9d9d9;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.loading-progress-bar {
+  height: 100%;
+  background-color: #0a84ff;
+  transition: width 0.3s ease;
+}
+
+.loading-status {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.retake-button-container {
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.no-ingredients-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 56px);
+}
+
+.no-result-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 18px;
+}
+
+.no-ingredients-title {
+  font-size: 18px;
+}
+
+.no-ingredients-description {
+  color: #969696;
+  font-size: 14px;
+  margin: 12px 0 24px 0;
+  line-height: 160%;
+  letter-spacing: 0;
+}
+
+.no-ingredients-actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* .retake-button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #666666;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.retake-button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+  color: #666666;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  transform: none;
+  box-shadow: none;
+} */

@@ -1,0 +1,64 @@
+.game-storage-page-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: #222034; /* 픽셀 아트 배경색 사용 */
+}
+
+.game-storage-page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 16px;
+  position: relative;
+  z-index: 10;
+}
+
+.game-storage-title {
+  color: #fef5f0;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 0 #723a3a;
+  position: relative;
+  padding-bottom: 10px;
+  line-height: 1.3;
+}
+
+.game-storage-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    #ff6b6b,
+    #ffc107,
+    #00d084,
+    #0693e3,
+    #9b51e0
+  );
+  border-radius: 2px;
+}
+
+/* 커스텀 스크롤바 */
+.game-storage-page-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.game-storage-page-content::-webkit-scrollbar-track {
+  background: #222034;
+}
+
+.game-storage-page-content::-webkit-scrollbar-thumb {
+  background-color: #ff5277;
+  border-radius: 0;
+  border: 2px solid #45283c;
+}

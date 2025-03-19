@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&display=swap");
+
+.recipe-selection-page-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: transparent;
+}
+
+.recipe-selection-component-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}

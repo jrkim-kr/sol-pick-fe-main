@@ -1,0 +1,59 @@
+.ingpopup-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.ingpopup-description-category {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.ingmain-category,
+.ingsub-category,
+.ingdetail-category {
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  margin-bottom: 0px;
+}
+
+.ingdetailArrow-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.ingpopup-description-image {
+  width: 100%;
+  height: 150px;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.ingpopup-description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+}
+
+.ingpopup-description-label {
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  margin-bottom: 0px;
+}
+
+.ingpopup-description-expiration,
+.ingpopup-description-gram,
+.ingpopup-description-adddate {
+  color: #969696;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  margin-bottom: 0px;
+}

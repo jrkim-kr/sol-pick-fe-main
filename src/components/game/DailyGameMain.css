@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* 한글 픽셀 폰트 추가 (DungGeunMo) */
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 픽셀 아트 기본 스타일 */
+.daily-game-main-container {
+  width: 90%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f8f8f8;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  max-width: 460px; /* 모바일 화면 최대 너비 내부 콘텐츠 */
+}
+
+/* 픽셀 폰트 적용 */
+.pixel-font {
+  font-family: "Press Start 2P", cursive !important;
+}
+
+/* 픽셀 폰트 적용 - 한글과 영문 모두 지원하는 폰트 스택 */
+.pixel-font-kr {
+  font-family: "DungGeunMo", "Press Start 2P", cursive !important;
+  letter-spacing: -0.5px; /* 한글 간격 조정 */
+  word-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* 픽셀 아트 스타일 레벨 정보 */
+.level-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: #3e3546;
+  border: 4px solid #45283c;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 #222034;
+  image-rendering: pixelated;
+  position: relative;
+  z-index: 2;
+}
+
+.level-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.game-info {
+  width: 90%;
+  margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-info h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #ffd866;
+  text-shadow: 2px 2px 0 #45283c;
+}
+
+.level-progress {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  justify-content: center;
+}
+
+.level-step {
+  width: 32px;
+  height: 32px;
+  border-radius: 0;
+  background-color: #222034;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f8f8f8;
+  border: 2px solid #45283c;
+  image-rendering: pixelated;
+}
+
+.level-step.active {
+  background-color: #ff5277;
+  color: #f8f8f8;
+  border-color: #45283c;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.reward-explainer {
+  font-size: 12px;
+  color: #f8f8f8;
+  margin-bottom: 8px;
+}
+
+.level-card-info {
+  font-size: 12px;
+  margin-top: 8px;
+  padding: 4px 8px;
+  background-color: #3e3546;
+  display: inline-block;
+  color: #f8f8f8;
+  border: 2px solid #45283c;
+}
+
+/* 픽셀 아트 스타일 게임 정보 */
+.game-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: #3e3546;
+  padding: 16px;
+  border: 4px solid #45283c;
+  border-radius: 4px;
+  image-rendering: pixelated;
+  position: relative;
+  z-index: 2;
+}
+
+.game-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 8px;
+}
+
+.game-stats p {
+  font-size: 12px;
+  margin: 4px 0;
+  color: #f8f8f8;
+}
+
+.game-controls {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+/* 픽셀 아트 스타일 버튼 */
+.restart-btn,
+.exit-btn,
+.next-level-btn,
+.exit-game-btn {
+  padding: 10px 16px;
+  background-color: #ff5277;
+  color: #f8f8f8;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #45283c;
+  border: 2px solid #45283c;
+  position: relative;
+  transition: all 0.1s ease;
+  image-rendering: pixelated;
+}
+
+.restart-btn:hover,
+.exit-btn:hover,
+.next-level-btn:hover,
+.exit-game-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #45283c;
+}
+
+.restart-btn:active,
+.exit-btn:active,
+.next-level-btn:active,
+.exit-game-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #45283c;
+}
+
+.exit-btn {
+  background-color: #5a6988;
+}
+
+/* 픽셀 아트 스타일 다음 레벨 버튼 */
+.next-level-btn {
+  padding: 12px 20px;
+  background-color: #29adff;
+  color: #f8f8f8;
+  font-size: 12px;
+  margin-top: 16px;
+  box-shadow: 0 4px 0 #45283c;
+}
+
+/* 픽셀 아트 스타일 게임 완료 모달 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.game-complete {
+  background-color: #3e3546;
+  border: 4px solid #45283c;
+  border-radius: 4px;
+  padding: 20px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  image-rendering: pixelated;
+  position: relative;
+  z-index: 1001;
+  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.game-complete:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, #ff5277, #ffd866, #29adff);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-complete h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffd866;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 0 #45283c;
+}
+
+.game-complete p {
+  font-size: 12px;
+  margin: 8px 0;
+  color: #f8f8f8;
+}
+
+.reward-earned {
+  font-size: 14px;
+  color: #29adff;
+  font-weight: bold;
+  margin: 16px 0 8px;
+}
+
+.total-reward {
+  font-size: 12px;
+  color: #ffd866;
+  margin-bottom: 16px;
+}
+
+.game-finished {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #695e43;
+  border-radius: 4px;
+  text-align: center;
+  border: 2px dashed #ffd866;
+}
+
+.game-finished h3 {
+  color: #ffd866;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-shadow: 2px 2px 0 #45283c;
+}
+
+.game-finished-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* 픽셀 아트 스타일 카드 그리드 */
+.card-grid {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* 레벨별 그리드 레이아웃 - 고정 높이 설정 */
+.card-grid.level-1 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 90px);
+}
+
+.card-grid.level-2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 90px);
+}
+
+.card-grid.level-3 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 90px);
+}
+
+.card-grid.level-4 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 90px);
+}
+
+.card-grid.level-5 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 90px);
+}
+
+/* 픽셀 아트 스타일 카드 */
+.card {
+  height: 90px;
+  perspective: 1000px;
+  cursor: pointer;
+  user-select: none;
+  position: relative; /* 명시적으로 position 설정 */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  margin: 0; /* 마진 제거 */
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  opacity: 0.7;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  image-rendering: pixelated;
+  border-radius: 4px;
+  box-sizing: border-box; /* 패딩과 테두리를 width/height에 포함 */
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  padding: 10px;
+  border: 4px solid #45283c;
+}
+
+.card-back {
+  background: linear-gradient(
+    135deg,
+    #694a77,
+    #694a77 50%,
+    #9badb7 50%,
+    #9badb7
+  );
+  background-size: 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #45283c;
+}
+
+/* 카드 내부 요소들 */
+.card-icon {
+  background-color: #f8f8f8;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  border: 2px solid #45283c;
+  border-radius: 4px;
+}
+
+.card-icon span {
+  font-size: 16px;
+}
+
+.card-name {
+  text-align: center;
+  font-weight: bold;
+  color: #222034;
+  font-size: 8px;
+  margin: 0;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+  width: 100%; /* 고정 너비 설정 */
+}
+
+.card-question {
+  color: #f8f8f8;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #45283c;
+}
+
+/* 모바일 대응 */
+@media (max-width: 480px) {
+  .card {
+    height: 80px;
+  }
+
+  .card-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .card-name {
+    font-size: 6px;
+  }
+}
+
+/* 레벨 관련 스타일 */
+.reward-info {
+  text-align: center;
+  padding: 8px;
+  background-color: #222034;
+  border: 2px solid #45283c;
+  border-radius: 2px;
+}
+
+.reward-info h3 {
+  font-size: 14px;
+  color: #ffd866;
+  text-shadow: 1px 1px 0 #45283c;
+  margin: 0;
+}
+
+/* 픽셀 아트 스타일 강화 및 애니메이션 */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.reward-earned {
+  animation: pulse 1.5s infinite;
+}
+
+/* 픽셀 아트 효과 */
+.pixel-shadow {
+  box-shadow: -4px 0 0 0 #45283c, 4px 0 0 0 #45283c, 0 -4px 0 0 #45283c,
+    0 4px 0 0 #45283c;
+}
+
+/* 반응형 디자인 개선 */
+@media (max-width: 480px) {
+  /* 모든 레벨에서 그리드 컬럼을 4개로 유지 */
+  .card-grid.level-3,
+  .card-grid.level-4,
+  .card-grid.level-5 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* 행 수 조정 - 카드 개수에 맞게 설정 */
+  .card-grid.level-3 {
+    grid-template-rows: repeat(4, 80px); /* 16장 = 4행 4열 */
+  }
+
+  .card-grid.level-4 {
+    grid-template-rows: repeat(5, 80px); /* 20장 = 5행 4열 */
+  }
+
+  .card-grid.level-5 {
+    grid-template-rows: repeat(6, 80px); /* 24장 = 6행 4열 */
+  }
+
+  /* 작은 화면에서 카드 크기 조정 */
+  .card {
+    height: 80px;
+  }
+
+  .card-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .card-name {
+    font-size: 7px;
+  }
+}
+
+/* 게임 로딩 애니메이션 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.loading-text {
+  font-size: 14px;
+  color: #ffd866;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 #45283c;
+}
+
+.loading-dots {
+  display: flex;
+}
+
+.loading-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  border-radius: 0;
+  background-color: #ff5277;
+  animation: loadingDot 1.4s infinite ease-in-out;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loadingDot {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}

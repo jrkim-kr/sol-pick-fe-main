@@ -1,0 +1,32 @@
+/* 게임 설명 페이지 스타일 */
+.game-instructions-page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden; /* 전체 컨테이너는 overflow hidden */
+}
+
+.game-instructions-component-container {
+  width: 100%;
+  height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 40px;
+}

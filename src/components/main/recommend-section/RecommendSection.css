@@ -1,0 +1,57 @@
+.recommend-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.recommend-title {
+  font-size: 16px;
+  padding-left: 16px;
+}
+
+.recommend-slide {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 0 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤 */
+  -ms-overflow-style: none; /* IE/Edge */
+  cursor: grab;
+  /* scroll-snap-type: x mandatory; */ /* 아이템에 스냅 */
+}
+
+/* 스크롤바 숨기기 */
+.recommend-slide::-webkit-scrollbar {
+  display: none;
+}
+
+/* 드래그 중일 때 커서 변경 */
+.recommend-slide:active {
+  cursor: grabbing;
+}
+
+.recommend-item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  /* scroll-snap-align: start; */ /* 아이템에 스냅 */
+}
+
+.recommend-item-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.recommend-item-description {
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #969696;
+  text-align: center;
+  white-space: nowrap;
+}

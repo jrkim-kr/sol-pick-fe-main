@@ -1,0 +1,56 @@
+/* 메인 컨테이너 스타일 */
+.card-issue-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* 카드 컨테이너 스타일 */
+.card-detail-handler-container {
+  margin-top: 10px;
+}
+
+/* 메시지 컨테이너 스타일 */
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* 타이틀 스타일 */
+.message-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 서브텍스트 스타일 */
+.message-subtext {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* 발급 버튼 스타일 */
+.issue-button {
+  background-color: #0a84ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* 발급 버튼 호버 효과 */
+.issue-button:hover {
+  background-color: #486eff;
+}

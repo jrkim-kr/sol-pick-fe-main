@@ -1,0 +1,59 @@
+.point-item {
+  display: flex;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.point-icon-container {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.point-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.point-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.point-name {
+  font-size: 16px;
+  color: #111827;
+  margin: 0;
+}
+
+.point-amount {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.point-amount.earn {
+  color: #38bdf8;
+}
+
+.point-amount.use {
+  color: #0ea5e9;
+}
+
+.point-date {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.bold {
+  font-weight: 600;
+}
